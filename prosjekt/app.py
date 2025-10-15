@@ -18,5 +18,9 @@ def varer():
 def kontakt():
     return render_template("kontakt.html")
 
+@app.route('/hjem')
+def hjem():
+    return render_template("index.html")
+
 if __name__ == "__main__":
     app.run()

@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
+
+    <div class="topnav">
+        <a class="Hjem" href="/hjem"><img src="/static/images/logo.png" alt="logo" style="height: 50px;" ></a>
+        <a class="meny" href="/meny">Meny</a>
+        <a class="varer" href="/varer">Varer</a>
+        <a class="kontakt" href="/kontakt">Kontakt</a>
+    </div>
     {% block content %}{% endblock %}
 </body>
 </html>

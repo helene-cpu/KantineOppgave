@@ -1,0 +1,15 @@
+.topnav {
+  background-color: #ffffff;
+  height: 70px;
+  border: 0.5px solid #030000;
+  padding: 1px;
+}
+
+.topnav a {
+  float: left;
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
