@@ -13,3 +13,17 @@
   text-decoration: none;
   font-size: 20px;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #ed852a;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 15px;
+}
