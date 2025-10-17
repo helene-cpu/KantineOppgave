@@ -14,9 +14,24 @@
   font-size: 20px;
 }
 
+.boks {
+    background-color: #ed852a;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 120px auto; 
+}
+
+
 .footer {
-    position: fixed;
-    left: 0;
+    position:fixed;
+     left: 0;
     right: 0;
     bottom: 0;
     width: 100%;
@@ -27,3 +42,4 @@
     box-sizing: border-box;
     padding: 15px;
 }
+

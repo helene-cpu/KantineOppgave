@@ -1,5 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Det er ingen varer</h1>
+
+<div class="boks">
+    <h1>Varer vi tilbyr</h1>
+    {% for m in mat %}
+        <p>{{ m }}</p>
+    {% endfor %}
+ </div>
+
 {% endblock %}
