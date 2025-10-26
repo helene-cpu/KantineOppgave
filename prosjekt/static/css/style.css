@@ -31,6 +31,28 @@ body {
     padding: 15px;
 }
 
+.container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    background-color: #ed852a;
+    padding: 10px;
+}
+
+.bakgrunn{
+    background-image: url(/static/images/burger_bakgrunn.png);
+    background-size: cover;
+    min-height: 800px;
+    padding: 70px;
+
+}
+.tittel {
+    text-align: center;
+
+}
+
+/*Index*/
+
 .mat img {
     height: 400px;
     width: 100%;
@@ -41,13 +63,24 @@ body {
 }
 
 
-.tittel {
-    text-align: center;
+/* Meny*/
 
+/*Små allergier*/
+h6 {
+    text-align: left;
+    padding-left: 20px;
 }
 
+/*Hver enkelt rett i menyen*/
+.grid-item {
+    background-color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
 
+/*Varer*/
 
+/*Boks for varer*/
 .boks {
     background-color:#ed852a;
     color: #ffffff;
@@ -62,34 +95,7 @@ body {
     height: 600px;
 }
 
-.bakgrunn{
-    background-image: url(/static/images/burger_bakgrunn.png);
-    background-size: cover;
-    min-height: 800px;
-    padding: 70px;
-
-}
-
-.container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    background-color: #ed852a;
-    padding: 10px;
-}
-
-h6 {
-    text-align: left;
-    padding-left: 20px;
-}
-
-
-.grid-item {
-    background-color: #ffffff;
-    padding: 10px;
-    text-align: center;
-}
-
+/*grid oppsett for varer*/
 .varer-grid {
   display: grid;
   grid-template-columns: 80px 1fr auto; 
@@ -98,11 +104,12 @@ h6 {
   width: 100%;
 }
 
-
+/*For hver enkelt vare*/
 .vare {
   display: contents; 
 }
 
+/*Bilder av varene*/
 .vare img {
   width: 60px;
   height: 60px;
@@ -110,12 +117,14 @@ h6 {
   border-radius: 8px;
 }
 
+/*Navn på varer*/
 .varenavn {
   font-weight: bold;
   text-align: left;
   color: #ffffff;
 }
 
+/*Pris på varer*/
 .pris {
   text-align: right;
   color: #ffffff;

@@ -11,11 +11,11 @@ def index():
 @app.route('/meny')
 def meny():
     meny_kantine=[
-        {"dag": "mandag", "rett": "Grønnsakssuppe", "bilde": "/static/images/suppe.jpg", "allergier": "Inneholder: Svin"},
-        {"dag": "tirsdag", "rett": "Pastasalat", "bilde": "/static/images/pastasalat.jpg", "allergier": "Inneholder: Gluten"},
-        {"dag": "Onsdag", "rett": "Laks og potet", "bilde": "/static/images/laks.jpg"},
-        {"dag": "Torsdag", "rett": "Vegetarlasagne", "bilde": "/static/images/lasagne.jpg", "allergier": "Inneholder: Gluten, Laktose"},
-        {"dag": "Fredag", "rett": "Wok", "bilde": "/static/images/wok.jpg",}
+        {"dag": "mandag", "rett": "Grønnsakssuppe", "bilde": "/static/images/suppe.jpg", "beskrivelse": "Grønnsaks suppe med gulrøtter, pølser og kjøttboller", "allergier": "Inneholder: Svin"},
+        {"dag": "tirsdag", "rett": "Pastasalat", "bilde": "/static/images/pastasalat.jpg", "beskrivelse": "varm salat med pasta og masse næringsrike grønnsaker","allergier": "Inneholder: Gluten"},
+        {"dag": "Onsdag", "rett": "Laks og potet", "bilde": "/static/images/laks.jpg", "beskrivelse": "En laksefilet per person, med potet og revet gulrot"},
+        {"dag": "Torsdag", "rett": "Vegetarlasagne", "bilde": "/static/images/lasagne.jpg","beskrivelse": "Vegetar lasagne med ostesaus på toppen", "allergier": "Inneholder: Gluten, Laktose"},
+        {"dag": "Fredag", "rett": "Wok", "bilde": "/static/images/wok.jpg", "beskrivelse": "nudler med grønnsaker og saus"}
         ]
     return render_template("meny.html", kantine=meny_kantine)
 
