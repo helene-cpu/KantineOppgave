@@ -2,7 +2,7 @@ from flask import Flask, render_template
 
 app= Flask(__name__)
 
-varer_kantine=["Litago - 26,-", "Iskaffe - 28,-", "Coca Cola - 32,-   + pant", "Iste - 30,-   + pant", "Påsmurte Rundstykker - 25,-", "Baguetter - 29,-", "Knekkebrød -18,-", "Sjokolade - 29,-"]
+
 
 @app.route('/')
 def index():
@@ -10,16 +10,41 @@ def index():
 
 @app.route('/meny')
 def meny():
-    return render_template("meny.html")
+    meny_kantine=[
+        {"dag": "mandag", "rett": "Grønnsakssuppe", "bilde": "/static/images/suppe.jpg", "allergier": "Inneholder: Svin"},
+        {"dag": "tirsdag", "rett": "Pastasalat", "bilde": "/static/images/pastasalat.jpg", "allergier": "Inneholder: Gluten"},
+        {"dag": "Onsdag", "rett": "Laks og potet", "bilde": "/static/images/laks.jpg"},
+        {"dag": "Torsdag", "rett": "Vegetarlasagne", "bilde": "/static/images/lasagne.jpg", "allergier": "Inneholder: Gluten, Laktose"},
+        {"dag": "Fredag", "rett": "Wok", "bilde": "/static/images/wok.jpg",}
+        ]
+    return render_template("meny.html", kantine=meny_kantine)
 
 @app.route('/varer')
 def varer():
+    varer_kantine=[
+        {"vare": "Litago", "pris": "26", "bilde": "/static/images/litago.png"},
+        {"vare": "Iskaffe", "pris": "28", "bilde": "/static/images/iskaffe.png"},
+        {"vare": "Coca Cola", "pris": "32", "bilde": "/static/images/coca-cola.png"},
+        {"vare": "Iste", "pris": "30", "bilde": "/static/images/iste.png"},
+        {"vare": "Påsmurte rundstykker", "pris": "29", "bilde": "/static/images/rundstykke.png"},
+        {"vare": "Baguetter", "pris": "29", "bilde": "/static/images/baguette.png"},
+        {"vare": "Knekkebrød", "pris": "18", "bilde": "/static/images/knekkebrod.png"},
+        {"vare": "Sjokolade", "pris": "29", "bilde": "/static/images/sjokolade.png"}
+    ]
     return render_template("varer.html", mat=varer_kantine)
 
 @app.route('/kontakt')
 def kontakt():
-    return render_template("kontakt.html")
+    ansatte_kantine=[
+        {"navn": "Thea", "stilling": "Sint kokk", "bilde": "/static/images/thea.jpg", "kommentar": "Alltid 2 sekunder fra å kaste sleiva, men maten er fantastisk", "epost": "matmedaggresjon@akademiet.no", "tlf": "+47 12345678"},
+        {"navn": "Markus", "stilling": "Dessertdirektør", "bilde": "/static/images/markus.jpg", "kommentar": "Den virkelige maktpersonen i kantina", "epost": "sjefssukker@akademiet.no", "tlf": "+47 21436587"},
+        {"navn": "Ebbe", "stilling": "Vaskedame", "bilde": "/static/images/ebbe.jpg", "kommentar": "Tar kampen mot støv- taper hver gang", "epost": "vaskedronning@akademiet.no", "tlf": "+47 87654321"},
+        {"navn": "Ludvig", "stilling": "Matfilosof", "bilde": "/static/images/ludvig.jpg", "kommentar": "spør- hva er egentlig til lunsj?", "epost": "eksistensiellkokk@akademiet.no", "tlf": "+47 67676767"},
+        {"navn": "Nikolai", "stilling": "Uhygenisk oppvaskmester", "bilde": "/static/images/nikolai.jpg", "kommentar": "Skyller tallerkner med optimisme og luft", "epost": "rentnok@akademiet.no", "tlf": "+47 76767676"},
+        {"navn": "Audun", "stilling": "Usunn ernæringsfysiolog", "bilde": "/static/images/audun.jpg", "kommentar": "Anbefaler pommes frites som grønnsak", "epost": "usunnveileder@akademiet.no", "tlf": "+47 34561278"}
+    ]
+    return render_template("kontakt.html",ansatte=ansatte_kantine )
 
     
 if __name__ == "__main__":
-    app.run()
+    app.run(debug=True)

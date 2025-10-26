@@ -1,8 +1,11 @@
+body {
+  padding-bottom: 70px;
+}
+
 .topnav {
   background-color: #ffffff;
   height: 70px;
   border: 0.5px solid #030000;
-  padding: 1px;
 }
 
 .topnav a {
@@ -13,21 +16,6 @@
   text-decoration: none;
   font-size: 20px;
 }
-
-.boks {
-    background-color: #ed852a;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    border-radius: 20px;
-    width: 100%;
-    max-width: 600px;
-    margin: 120px auto; 
-}
-
 
 .footer {
     position:fixed;
@@ -43,3 +31,74 @@
     padding: 15px;
 }
 
+.mat img {
+    height: 400px;
+    width: 100%;
+}
+
+.info {
+    text-align: center;
+}
+
+
+.tittel {
+    text-align: center;
+
+}
+
+
+
+.boks {
+    background-color:#ed852a;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    margin: 120px auto; 
+    height: 600px;
+}
+
+.bakgrunn{
+    background-image: url(/static/images/burger_bakgrunn.png);
+    background-size: cover;
+    min-height: 800px;
+    padding: 70px;
+
+}
+
+
+.varer-grid {
+  display: grid;
+  grid-template-columns: 80px 1fr auto; 
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+
+.vare {
+  display: contents; 
+}
+
+.vare img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.varenavn {
+  font-weight: bold;
+  text-align: left;
+  color: #ffffff;
+}
+
+.pris {
+  text-align: right;
+  color: #ffffff;
+  font-weight: bold;
+}

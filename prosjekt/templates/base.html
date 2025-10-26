@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kantine</title>
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 <body>
@@ -15,11 +15,12 @@
         <a class="kontakt" href="/kontakt">Kontakt</a>
     </div>
 
-    <div class="footer">
+
+    {% block content %}{% endblock %}
+      <div class="footer">
     <p>© Copyright 2025 | Akademiet kantine</p>
     <p>Laget av Helene</p>
     </div>
-
-    {% block content %}{% endblock %}
+    
 </body>
 </html>
